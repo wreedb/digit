@@ -1,0 +1,19 @@
+module git.signature;
+
+import git;
+
+extern (C):
+
+int git_signature_new(git_signature** sig_out, const(char)* name, const(char)* email, git_time_t time, int offset);
+int git_signature_now(git_signature** sig_out, const(char)* name, const(char)* email);
+
+int git_signature_default_from_env(
+    git_signature** author_out,
+    git_signature** committer_out,
+    git_repository* repo
+);
+
+int git_signature_default(git_signature** sig_out, git_repository* repo);
+int git_signature_from_buffer(git_signature** sig_out, const(char)* buf);
+int git_signature_dup(git_signature** dest, const(git_signature)* sig);
+void git_signature_free(git_signature* sig);

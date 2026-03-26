@@ -1,0 +1,26 @@
+module git.sys;
+
+public import
+    git.sys.alloc,
+    git.sys.commit,
+    git.sys.commitgraph,
+    git.sys.config,
+    git.sys.credential,
+    git.sys.diff,
+    git.sys.email,
+    git.sys.errors,
+    git.sys.filter,
+    git.sys.hashsig,
+    git.sys.index,
+    git.sys.mempack,
+    git.sys.merge,
+    git.sys.midx,
+    git.sys.odbbackend,
+    git.sys.openssl,
+    git.sys.path,
+    git.sys.refdbbackend,
+    git.sys.refs,
+    git.sys.remote,
+    git.sys.repository,
+    git.sys.stream,
+    git.sys.transport;

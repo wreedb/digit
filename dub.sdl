@@ -1,0 +1,8 @@
+name "digit"
+description "D bindings to libgit2"
+authors "Will Reed"
+homepage "https://codeberg.org/wreedb/digit"
+copyright "Copyright (C) 2026 Will Reed <wreed@disroot.org>"
+license "LGPL-3.0-or-later WITH LGPL-3.0-linking-exception"
+
+targetType "library"

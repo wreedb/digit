@@ -1,0 +1,32 @@
+module git.cherrypick;
+
+import git;
+
+extern (C):
+
+struct git_cherrypick_options
+{
+    uint version_;
+    uint mainline;
+    git_merge_options merge_opts;
+    git_checkout_options checkout_opts;
+}
+
+enum GIT_CHERRYPICK_OPTIONS_VERSION = 1;
+
+int git_cherrypick_options_init(git_cherrypick_options* opts, uint version_);
+
+int git_cherrypick_commit(
+    git_index** index_out,
+    git_repository* repo,
+    git_commit* cherrypick_commit,
+    git_commit* our_commit,
+    uint mainline,
+    const(git_merge_options)* merge_options
+);
+
+int git_cherrypick(
+    git_repository* repo,
+    git_commit* commit,
+    const(git_cherrypick_options)* cherrypick_options
+);
